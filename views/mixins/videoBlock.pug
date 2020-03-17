@@ -1,0 +1,9 @@
+mixin videoBlock(video = {})
+    .videoBlock
+        a(href=routes.videoDetail(video.id))
+            video.videoBlock__thumbnail(src=video.videoFile, controls=true)
+            h4.videoBlock__title=video.title
+            h4.videoBlock__description=video.description
+            
+            
+            a.form-container__link.form-container__link--delete(href=routes.deleteVideo(video.id)) Delete Video 
